@@ -149,6 +149,14 @@ h1 {
           transform: translateY(-50%);
         }
       }
+
+      em {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        box-sizing: content-box;
+        border: 1px solid #aaa;
+      }
     }
   }
 
@@ -192,6 +200,11 @@ h1 {
       font-family: 'Oswald', sans-serif;
       font-weight: 700;
       text-transform: uppercase;
+
+      em {
+        width: 20px;
+        height: 10px;
+      }
     }
   }
 
