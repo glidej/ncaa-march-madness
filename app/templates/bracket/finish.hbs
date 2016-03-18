@@ -1,0 +1,46 @@
+{{!--  <div class='bracket'>
+  {{#each east as |conference|}}
+    {{#each conference as |round|}}
+      <div class='column'>
+        {{#each round as |team|}}
+          <div class='bracket-team'>
+            <span>{{team}}</span>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  {{/each}}
+</div> --}}
+<div class='bracket'>
+{{#each allRounds as |round|}}
+  <div class='column'>
+    {{#each round as |team|}}
+      <div class='bracket-team'>
+        <span>{{team.name}}</span>
+      </div>
+    {{/each}}
+  </div>
+{{/each}}
+</div>
+
+{{!-- <div class='winner bracket'>
+{{#each winner as |team|}}
+  <div class='column'>
+      <div class='bracket-team'>
+        <span>{{team.name}}</span>
+      </div>
+  </div>
+{{/each}}
+</div>
+
+<div class='bracket'>
+{{#each right as |round|}}
+  <div class='column'>
+    {{#each round as |team|}}
+      <div class='bracket-team'>
+        <span>{{team.name}}</span>
+      </div>
+    {{/each}}
+  </div>
+{{/each}}
+</div> --}}
