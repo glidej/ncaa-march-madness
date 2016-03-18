@@ -1,7 +1,6 @@
-# Ncaa
+# A color-based NCAA bracket generator.
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Generate your NCAA bracket this year by choosing your favorite team colors. [Demo](http://jglide-march-madness.herokuapp.com/).
 
 ## Prerequisites
 
