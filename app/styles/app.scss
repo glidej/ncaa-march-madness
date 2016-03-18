@@ -23,17 +23,19 @@ $screen-xlrg: 78em; //1248px
   }
 }
 
-.navbar-brand img {
-  height: 100%;
+h1 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.matchup {
-  h1 {
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+.index {
+  text-align: center;
+}
+
+.navbar-brand img {
+  height: 100%;
 }
 
 .team-picker {
