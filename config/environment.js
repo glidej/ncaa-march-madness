@@ -4,26 +4,16 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ncaa',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
-    googleFonts: [
-      'Oswald:400,700'
-    ],
-
-    // Set or update content security policies
-    contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
-      'font-src': "'self' fonts.gstatic.com",
-      'connect-src': "'self'",
-      'img-src': "'self' www.facebook.com p.typekit.net",
-      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
-      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
-    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
 
@@ -43,7 +33,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
