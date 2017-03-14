@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import TeamColors from 'npm:ncaa-team-colors';
 
 export default Ember.Route.extend({
   firstRound: Ember.inject.service('first-round'),
@@ -39,6 +40,16 @@ export default Ember.Route.extend({
       }
 
       this.transitionTo('bracket.round.matchup', nextRound, nextMatch);
+    }
+  },
+
+  beforeModel(transition) {
+    const integrity = this.get('firstRound.matchups').every((team) => {
+      return !!TeamColors.findBy('id', team);
+    });
+
+    if (!integrity) {
+      transition.abort();
     }
   },
 
