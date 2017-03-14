@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   firstRound: Ember.inject.service('first-round'),
+  progress: Ember.inject.service('progress'),
+
   actions: {
     pickTeam(team) {
       var model = this.modelFor(this.routeName);
@@ -20,6 +22,8 @@ export default Ember.Route.extend({
 
       var nextMatch = currentMatchup + 1;
       var nextRound = currentRound;
+
+      this.get('progress').update(rounds);
 
       if (currentMatchup === (roundLength / 2) - 1) {
         // end of round
@@ -53,6 +57,8 @@ export default Ember.Route.extend({
       let round = Array.from({length: 64/divisions[i]});
       model.get('rounds').pushObject(round);
     }
+
+    this.get('progress').start();
 
     return model;
   }
