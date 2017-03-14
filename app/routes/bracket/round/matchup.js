@@ -38,7 +38,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    pickTeam(team) {
+    pickTeam() {
       return true;
     }
   }

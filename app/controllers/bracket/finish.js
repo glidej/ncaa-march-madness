@@ -11,11 +11,11 @@ export default Ember.Controller.extend({
         return {
           'name': '[undefined]',
           'colors': []
-        }
+        };
       }
 
       return team;
-    })
+    });
   },
 
   left: Ember.computed('model.rounds.[]', {
@@ -58,11 +58,11 @@ export default Ember.Controller.extend({
             return {
               'name': '[undefined]',
               'colors': []
-            }
+            };
           }
 
           return team;
-      })]
+      })];
     }
   }),
 
