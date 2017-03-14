@@ -1,8 +1,8 @@
 import Ember from 'ember';
+import TeamColors from 'npm:ncaa-team-colors';
 
 export default Ember.Route.extend({
-  teamService: Ember.inject.service('teams'),
-  teams: Ember.computed.alias('teamService.teams'),
+  teams: TeamColors,
 
   model(params) {
     var round = this.modelFor('bracket.round');
