@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   matchups: [
     "ff39a4e3-2cc6-48f5-ac58-ff3b661328bb", // Villanova Wildcats
-    "120499c4-92d6-48db-90e9-d27ac8a6fb0b", // New Orleans Privateers (TBD)
+    "2ac08500-a010-4fcd-8dd4-d409a8783e52", // Mount St. Mary's Mountaineers
 
     "dd62793f-2ef2-468f-8288-3363f3b497e3", // Wisconsin Badgers
     "8b2a6fc4-7ada-4141-a49b-d00f767a6076", // Virginia Tech Hokies
@@ -87,7 +87,7 @@ export default Ember.Service.extend({
     "6649ba1e-ab1c-49ca-8943-9a1ee3fd0b5b", // Winthrop Eagles
 
     "07441489-67ed-4693-a7e9-6220332412be", // Cincinnati Bearcats
-    "4bec8dec-c250-42c3-9fb0-e545aea5066f", // Wake Forest Demon Deacons (TBD)
+    "253b5628-3efd-4d16-a31c-af8c4efe3662", // Kansas State Wildcats
 
     "e7384e50-1add-4337-8094-063a6ba07e4a", // UCLA Bruins
     "859c2684-5c7f-416c-a965-84b4a30cb65a", // Kent State Golden Flashes
