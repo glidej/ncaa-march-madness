@@ -51,7 +51,7 @@ export default Ember.Service.extend({
     "f97a4f08-64f4-47ea-8565-7087d442abdd", // North Dakota Fighting Hawks
 
     "d08152ed-57f4-405d-a848-b6ccbbd59602", // Kansas Jayhawks
-    "c6361ba8-5b0d-4636-9cc9-efe4aa673f09", // UC Davis Aggies (TBD)
+    "c6361ba8-5b0d-4636-9cc9-efe4aa673f09", // UC Davis Aggies
 
     "50d5ddaf-91fa-472e-8ef0-52eeec08cfe4", // Miami (FL) Hurricanes
     "2aee418d-168d-4754-bae7-06f0f46391b1", // Michigan State Spartans
