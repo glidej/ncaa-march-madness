@@ -15,7 +15,7 @@ export default Ember.Service.extend({
     "12f0400f-c2ed-4fd7-bd9c-a21b7c85db16", // East Tennessee State Buccaneers
 
     "22502872-46fe-4358-97de-3e5071d4f24d", // Southern Methodist Mustangs
-    "c52d8366-c94a-497c-9975-39c4a651fa72", // USC Trojans (TBD)
+    "c52d8366-c94a-497c-9975-39c4a651fa72", // USC Trojans
 
     "087000c8-44ac-4177-9040-34de231ccc81", // Baylor Bears
     "fe8b3bd5-c5da-403a-9fe8-58a6e32a7b3f", // New Mexico State Aggies
