@@ -1,9 +1,11 @@
-import Ember from 'ember';
 import TeamColors from 'npm:ncaa-team-colors';
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
+import Object from '@ember/object';
 
-export default Ember.Route.extend({
-  firstRound: Ember.inject.service('first-round'),
-  progress: Ember.inject.service('progress'),
+export default Route.extend({
+  firstRound: inject('first-round'),
+  progress: inject('progress'),
 
   actions: {
     pickTeam(team) {
@@ -54,9 +56,11 @@ export default Ember.Route.extend({
   },
 
   model() {
-    var model = Ember.Object.extend({
+    var model = Object.extend({
+      rounds: null
+    }).create({
       rounds: []
-    }).create();
+    });
 
     var firstRound = this.get('firstRound.matchups');
     model.get('rounds').pushObject(firstRound);

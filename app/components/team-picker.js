@@ -1,15 +1,16 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed, get } from '@ember/object';
 
-export default Ember.Component.extend({
+export default Component.extend({
 
   selectedTeam: null,
 
-  left: Ember.computed('matchup.[]', {
+  left: computed('matchup.[]', {
     get() {
       return this.get('matchup').objectAt(0);
     }
   }),
-  right: Ember.computed('matchup.[]', {
+  right: computed('matchup.[]', {
     get() {
       return this.get('matchup').objectAt(1);
     }
@@ -17,7 +18,7 @@ export default Ember.Component.extend({
 
   actions: {
     pick(team) {
-      this.sendAction('pick', team);
+      get(this, 'pick')(team);
     }
   }
 });

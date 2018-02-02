@@ -1,7 +1,10 @@
-import Ember from 'ember';
 
-export default Ember.Component.extend({
-    progress: Ember.inject.service('progress'),
-    percentage: Ember.computed.alias('progress.percentage'),
-    started: Ember.computed.alias('progress.started')
+import Component from '@ember/component';
+import { inject } from '@ember/service';
+import { alias } from '@ember/object/computed'
+
+export default Component.extend({
+    progress: inject('progress'),
+    percentage: alias('progress.percentage'),
+    started: alias('progress.started')
 });
