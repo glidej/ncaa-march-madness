@@ -1,11 +1,12 @@
-import Ember from 'ember';
+import Service from '@ember/service';
+import { computed } from '@ember/object';
 
-export default Ember.Service.extend({
+export default Service.extend({
     total: 0,
     completed: 0,
     started: false,
 
-    percentage: Ember.computed('total', 'completed', function () {
+    percentage: computed('total', 'completed', function () {
         const total = this.get('total');
         const completed = this.get('completed');
 

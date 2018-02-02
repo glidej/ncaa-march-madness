@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
 
 export function getTeamName(params/*, hash*/) {
   return params;
 }
 
-export default Ember.Helper.helper(getTeamName);
+export default helper(getTeamName);

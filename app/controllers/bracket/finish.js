@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
 import TeamColors from 'npm:ncaa-team-colors';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   teams: TeamColors,
 
   mapTeams(chunk) {
@@ -18,7 +19,7 @@ export default Ember.Controller.extend({
     })
   },
 
-  left: Ember.computed('model.rounds.[]', {
+  left: computed('model.rounds.[]', {
     get() {
       // return top half of array
       let conference = [];
@@ -34,7 +35,7 @@ export default Ember.Controller.extend({
     }
   }),
 
-  right: Ember.computed('model.rounds.[]', {
+  right: computed('model.rounds.[]', {
     get() {
       // return bottom half of array
       let conference = [];
@@ -50,7 +51,7 @@ export default Ember.Controller.extend({
     }
   }),
 
-  winner: Ember.computed('model.rounds.[]', {
+  winner: computed('model.rounds.[]', {
     get() {
       return [this.get('model.rounds').objectAt(6).map((id) => {
           let team = this.get('teams').findBy('id', id);
@@ -66,7 +67,7 @@ export default Ember.Controller.extend({
     }
   }),
 
-  allRounds: Ember.computed('left', 'winner', 'right', {
+  allRounds: computed('left', 'winner', 'right', {
     get() {
       return Array.prototype.concat(this.get('left'), this.get('winner'), this.get('right'));
     }

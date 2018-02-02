@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import Object from '@ember/object';
 import TeamColors from 'npm:ncaa-team-colors';
 
-export default Ember.Route.extend({
+export default Route.extend({
   teams: TeamColors,
 
   model(params) {
@@ -24,7 +25,7 @@ export default Ember.Route.extend({
       matchup.push(this.getTeamReference(secondTeam));
     }
 
-    return Ember.Object.extend({
+    return Object.extend({
       'round': parseInt(this.paramsFor('bracket.round').round, 10)+1,
       'matchup': matchup
     }).create();
@@ -38,7 +39,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    pickTeam(team) {
+    pickTeam() {
       return true;
     }
   }
