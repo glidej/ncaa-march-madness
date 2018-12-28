@@ -6,7 +6,7 @@
           <span>
             {{team.name}}
             {{#each team.colors as |color|}}
-              <em style="background-color: {{color}}"></em>
+              <ColorSwatch @color={{color}} />
             {{/each}}
           </span>
         </div>

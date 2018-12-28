@@ -3,7 +3,7 @@
   <div class="team left-team" {{action "pick" left.ref}}>
     <div class="team-colors">
       {{#each left.colors as |color|}}
-        <div class="color" style={{color}}>{{color}}</div>
+        <ColorButton @color={{color}} />
       {{/each}}
     </div>
   </div>
@@ -15,7 +15,7 @@
   <div class="team right-team" {{action "pick" right.ref}}>
     <div class="team-colors">
       {{#each right.colors as |color|}}
-        <div class="color" style={{color}}>{{color}}</div>
+        <ColorButton @color={{color}} />
       {{/each}}
     </div>
   </div>
