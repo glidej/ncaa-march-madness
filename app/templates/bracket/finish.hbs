@@ -1,16 +1,16 @@
-<div class='bracket'>
-{{#each allRounds as |round|}}
-  <div class='column'>
-    {{#each round as |team|}}
-      <div class='bracket-team'>
-        <span>
-          {{team.name}}
-          {{#each team.colors as |color|}}
-            <em style="background-color: {{color}}"></em>
-          {{/each}}
-        </span>
-      </div>
-    {{/each}}
-  </div>
-{{/each}}
+<div class="bracket">
+  {{#each allRounds as |round|}}
+    <div class="column">
+      {{#each round as |team|}}
+        <div class="bracket-team">
+          <span>
+            {{team.name}}
+            {{#each team.colors as |color|}}
+              <em style="background-color: {{color}}"></em>
+            {{/each}}
+          </span>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
 </div>

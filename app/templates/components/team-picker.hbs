@@ -1,22 +1,22 @@
 
-<div class='team-picker'>
-  <div class='team left-team' {{action 'pick' left.ref}}>
-    <div class='team-colors'>
-    {{#each left.colors as |color|}}
-      <div class='color' style={{color}}>{{color}}</div>
-    {{/each}}
+<div class="team-picker">
+  <div class="team left-team" {{action "pick" left.ref}}>
+    <div class="team-colors">
+      {{#each left.colors as |color|}}
+        <div class="color" style={{color}}>{{color}}</div>
+      {{/each}}
     </div>
   </div>
 
-  <div class='vs'>
+  <div class="vs">
     <span>VS</span>
   </div>
 
-  <div class='team right-team' {{action 'pick' right.ref}}>
-    <div class='team-colors'>
-    {{#each right.colors as |color|}}
-      <div class='color' style={{color}}>{{color}}</div>
-    {{/each}}
+  <div class="team right-team" {{action "pick" right.ref}}>
+    <div class="team-colors">
+      {{#each right.colors as |color|}}
+        <div class="color" style={{color}}>{{color}}</div>
+      {{/each}}
     </div>
   </div>
 </div>
