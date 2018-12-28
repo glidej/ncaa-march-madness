@@ -14,12 +14,12 @@ export default Component.extend({
 
   left: computed('matchup.[]', {
     get() {
-      return this.sanitize(this.get('matchup').objectAt(0));
+      return this.get('matchup').objectAt(0);
     }
   }),
   right: computed('matchup.[]', {
     get() {
-      return this.sanitize(this.get('matchup').objectAt(1));
+      return this.get('matchup').objectAt(1);
     }
   }),
 
