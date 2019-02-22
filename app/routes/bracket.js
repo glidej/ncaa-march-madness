@@ -26,7 +26,7 @@ export default Route.extend({
       var nextMatch = currentMatchup + 1;
       var nextRound = currentRound;
 
-      this.get('progress').update(rounds);
+      this.progress.update(rounds);
 
       if (currentMatchup === (roundLength / 2) - 1) {
         // end of round
@@ -73,7 +73,7 @@ export default Route.extend({
       model.get('rounds').pushObject(round);
     }
 
-    this.get('progress').start();
+    this.progress.start();
 
     return model;
   }

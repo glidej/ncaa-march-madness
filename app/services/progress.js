@@ -7,8 +7,8 @@ export default Service.extend({
     started: false,
 
     percentage: computed('total', 'completed', function () {
-        const total = this.get('total');
-        const completed = this.get('completed');
+        const total = this.total;
+        const completed = this.completed;
 
         if (total === 0 && completed === 0) {
             return 0;

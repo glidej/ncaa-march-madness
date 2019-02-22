@@ -7,7 +7,7 @@ export default Component.extend({
   style: computedStyle('background'),
 
   background: computed('color', function() {
-    const color = this.get('color');
+    const color = this.color;
 
     return {
       backgroundColor: color

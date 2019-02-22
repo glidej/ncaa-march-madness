@@ -7,7 +7,7 @@ export default Controller.extend({
 
   mapTeams(chunk) {
     return chunk.map((id) => {
-      let team = this.get('teams').findBy('id', id);
+      let team = this.teams.findBy('id', id);
       if (!team) {
         return {
           'name': '[undefined]',
@@ -16,7 +16,7 @@ export default Controller.extend({
       }
 
       return team;
-    })
+    });
   },
 
   left: computed('model.rounds.[]', {
@@ -54,7 +54,7 @@ export default Controller.extend({
   winner: computed('model.rounds.[]', {
     get() {
       return [this.get('model.rounds').objectAt(6).map((id) => {
-          let team = this.get('teams').findBy('id', id);
+          let team = this.teams.findBy('id', id);
           if (!team) {
             return {
               'name': '[undefined]',
@@ -63,13 +63,13 @@ export default Controller.extend({
           }
 
           return team;
-      })]
+      })];
     }
   }),
 
   allRounds: computed('left', 'winner', 'right', {
     get() {
-      return Array.prototype.concat(this.get('left'), this.get('winner'), this.get('right'));
+      return Array.prototype.concat(this.left, this.winner, this.right);
     }
   })
 });

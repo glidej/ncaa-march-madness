@@ -34,7 +34,7 @@ export default Route.extend({
   getTeamReference(ref) {
     return {
       'ref': ref,
-      'colors': this.get('teams').findBy('id', ref).colors
+      'colors': this.teams.findBy('id', ref).colors
     };
   },
 
