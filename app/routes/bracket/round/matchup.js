@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import Object from '@ember/object';
-import TeamColors from 'npm:ncaa-team-colors';
+import TeamColors from 'ncaa-team-colors';
 
 export default Route.extend({
   teams: TeamColors,

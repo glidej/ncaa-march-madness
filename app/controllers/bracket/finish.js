@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import { computed } from '@ember/object';
-import TeamColors from 'npm:ncaa-team-colors';
+import TeamColors from 'ncaa-team-colors';
 
 export default Controller.extend({
   teams: TeamColors,

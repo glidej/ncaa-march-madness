@@ -1,4 +1,4 @@
-import TeamColors from 'npm:ncaa-team-colors';
+import TeamColors from 'ncaa-team-colors';
 import Route from '@ember/routing/route';
 import { inject } from '@ember/service';
 import Object from '@ember/object';
